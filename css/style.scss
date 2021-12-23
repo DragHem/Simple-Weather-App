@@ -1,0 +1,90 @@
+body {
+  font-family: "Roboto", sans-serif;
+  background-color: #ccc;
+}
+
+.image {
+  z-index: -1;
+  background-image: url("../pexels-josh-hild-2645497.jpg");
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100vw;
+  height: 100vh;
+  opacity: 0.15;
+}
+
+.container-sm {
+  opacity: 1;
+  max-width: 700px;
+  background-color: transparent;
+  position: relative;
+
+  input {
+    padding: 0.2rem;
+    margin: 1rem 0;
+    min-width: 70%;
+    font-size: 18px;
+    border: none;
+  }
+
+  .mainInfo {
+    div.info {
+      p {
+        margin: 0.4rem;
+        font-size: 24px;
+      }
+    }
+
+    img {
+      display: block;
+      transform: scale(1.2);
+    }
+
+    .desc:first-letter {
+      text-transform: capitalize;
+    }
+
+    .temp {
+      font-size: 32px;
+    }
+
+    .desc,
+    .temp,
+    .time,
+    .day {
+      padding: 0.4rem;
+    }
+  }
+
+  .moreInfo {
+    width: 100%;
+
+    div {
+      padding: 0 0.4rem;
+      flex-grow: 1;
+
+      i {
+        font-size: 2rem;
+        margin-bottom: 0.5rem;
+      }
+
+      p {
+        font-size: 16px;
+        i {
+          font-size: 16px;
+          margin-right: 0.2rem;
+        }
+      }
+    }
+  }
+}
+
+// @media screen and (max-width: 768px) {
+//   .container-sm {
+//     height: 100vh;
+//   }
+// }

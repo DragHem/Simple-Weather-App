@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="pl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>PogodaApp</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+      integrity="sha512-Fo3rlrZj/k7ujTnHg4CGR2D7kSs0v4LLanw2qksYuRlEzO+tcaEPQogQ0KaoGN26/zrn20ImR1DfuLWnOo7aBA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="./css/style.css" />
+  </head>
+  <body>
+    <div class="image"></div>
+    <div class="container-sm d-flex flex-column align-items-center">
+      <input type="text" placeholder="Podaj miasto" value="Warszawa" />
+
+      <section class="mainInfo d-flex flex-column align-items-center">
+        <div class="info">
+          <p>
+            <i class="fas fa-map-marker-alt"></i>
+            <span class="city">City Name</span>,
+            <span class="country">Country</span>
+          </p>
+        </div>
+        <img
+          class="img-fluid"
+          src="http://openweathermap.org/img/wn/10d@2x.png"
+          alt="Weather icon"
+        />
+        <h3 class="desc">Description</h3>
+        <h1 class="temp">Temp °C</h1>
+        <h3 class="day">Day</h3>
+        <h3 class="time">Time</h3>
+      </section>
+      <section class="moreInfo d-flex">
+        <div class="d-flex flex-column align-items-center">
+          <i class="fas fa-thermometer-three-quarters"></i>
+          <p class="tempMin">Min: - °C</p>
+          <p class="tempMax">Max: - °C</p>
+        </div>
+        <div class="d-flex flex-column align-items-center">
+          <i class="fas fa-wind"></i>
+          <p class="wind">- m/s</p>
+        </div>
+        <div class="d-flex flex-column align-items-center">
+          <i class="fas fa-umbrella"></i>
+          <p><i class="fas fa-tint"></i><span class="rain">- mm</span></p>
+          <p><i class="far fa-snowflake"></i><span class="snow">- mm</span></p>
+        </div>
+      </section>
+    </div>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+      crossorigin="anonymous"
+    ></script>
+    <script src="app.js"></script>
+  </body>
+</html>
