@@ -25,6 +25,7 @@
       referrerpolicy="no-referrer"
     />
     <link rel="stylesheet" href="./css/style.css" />
+    <link rel="manifest" href="./manifest.json" />
   </head>
   <body>
     <div class="image"></div>
@@ -48,6 +49,7 @@
         <h1 class="temp">Temp °C</h1>
         <h3 class="day">Day</h3>
         <h3 class="time">Time</h3>
+        <h3 class="time-city">Time</h3>
       </section>
       <section class="moreInfo d-flex">
         <div class="d-flex flex-column align-items-center">
@@ -72,5 +74,14 @@
       crossorigin="anonymous"
     ></script>
     <script src="app.js"></script>
+    <script>
+      if (!navigator.serviceWorker.controller) {
+        navigator.serviceWorker.register("/sw.js").then(function (reg) {
+          console.log(
+            "Service worker has been registered for scope: " + reg.scope
+          );
+        });
+      }
+    </script>
   </body>
 </html>

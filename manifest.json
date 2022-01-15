@@ -1,0 +1,16 @@
+{
+  "name": "Weather App",
+  "short_name": "WeApp",
+  "theme_color": "#2196f3",
+  "background_color": "#2196f3",
+  "display": "standalone",
+  "orientation": "portrait",
+  "scope": "/",
+  "start_url": "/index.html",
+  "icons": [
+    {
+      "src": "./cloud-solid.svg",
+      "sizes": "any"
+    }
+  ]
+}

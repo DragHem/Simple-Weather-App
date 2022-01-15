@@ -51,6 +51,7 @@ const wind = document.querySelector(".wind");
 const rain = document.querySelector(".rain");
 const snow = document.querySelector(".snow");
 const time = document.querySelector(".time");
+const timeCity = document.querySelector(".time-city");
 const day = document.querySelector(".day");
 const container = document.querySelector(".image");
 
@@ -80,9 +81,8 @@ inputValue.addEventListener("change", (e) => {
       })
       .then((response) => response.json())
       .then((data) => Object.assign(pogoda, data))
+      .then(() => searchPhotos(inputValue))
       .finally(() => Show(inputValue));
-
-    searchPhotos(inputValue);
   }
 });
 
@@ -122,11 +122,26 @@ function Show(inputValue) {
     data.getHours() < 10 ? `0${data.getHours()}` : data.getHours()
   }:${data.getMinutes() < 10 ? `0${data.getMinutes()}` : data.getMinutes()}`;
 
+  // Godzina lokalna w danym mieście
+
+  const godzina =
+    (pogoda.dt + pogoda.timezone + data.getTimezoneOffset() * 60) * 1000;
+
+  const localData = new Date(godzina);
+
+  timeCity.textContent = `Godzina lokalna: ${
+    localData.getHours() < 10
+      ? `0${localData.getHours()}`
+      : localData.getHours()
+  }:${
+    localData.getMinutes() < 10
+      ? `0${localData.getMinutes()}`
+      : localData.getMinutes()
+  }`;
+
   //Dzień tygodnia
   day.textContent =
     data.getDay() == 0 ? dniTygodnia[6] : dniTygodnia[data.getDay() - 1];
-
-  // searchPhotos(inputValue);
 
   setInterval(() => Show(inputValue), 60000);
 }
