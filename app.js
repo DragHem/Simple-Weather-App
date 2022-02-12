@@ -1,4 +1,4 @@
-const APIKey = "6cd7eee5580b7242586053a6052a8d3b";
+const APIKey = "";
 
 //API pogoda
 let inputValue = document.querySelector("input");
@@ -15,7 +15,7 @@ fetch(API)
   .finally(() => Show());
 
 //API Obrazki
-const auth = "563492ad6f917000010000011fe66a5055834c9faea3017eb3b55616";
+const auth = "";
 
 async function fetchApi(url) {
   const dataFetch = await fetch(url, {
